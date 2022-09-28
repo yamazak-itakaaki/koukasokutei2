@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'blog.apps.BlogConfig',
+    'accounts.appsAccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,4 @@ STATIC_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 
 )
+AUTH_USER_MODEL='accounts.CustomUser'

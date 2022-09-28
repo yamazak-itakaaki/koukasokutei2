@@ -17,15 +17,13 @@ from re import template
 from typing import Generic
 from django.urls import path
 
-from django.contrib import messages
-
 from . import views
+
+
 
 app_name = 'blog'
 urlpatterns = [
-    path('', views.BaseView.as_view(), name="base"),
-]
-
-class InquiryView(generic.FormView):
-    template_name = "email_config.html"
+    path('', views.IndexView.as_view(), name="base"),
+    path('inquiry/',views.InquiryView.as_view(), name="inquiry"),
     
+]

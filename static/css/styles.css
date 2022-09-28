@@ -11286,3 +11286,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+.my-div-style {
+  margin-top: 6rem;
+}

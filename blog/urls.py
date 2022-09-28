@@ -23,7 +23,14 @@ from . import views
 
 app_name = 'blog'
 urlpatterns = [
-    path('', views.IndexView.as_view(), name="base"),
-    path('inquiry/',views.InquiryView.as_view(), name="inquiry"),
+
+    path('', views.IndexView.as_view(), name="index"),
+    path('inquiry/', views.InquiryView.as_view(), name="inqiry"),
+    path('blog-list/', views.BloglistView.as_view(), name=""),
+    path('blog-betail/', views.BlogView.as_view(), name=""),
+    path('blog-create/', views.BlogView.as_view(), name=""),
+    path('blog-update/', views.View.as_view(), name=""),
+    path('blog-delete/', views.View.as_view(), name=""),
+
     
 ]

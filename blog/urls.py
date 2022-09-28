@@ -21,8 +21,11 @@ app_name = 'blog'
 urlpatterns = [
 
     path('', views.IndexView.as_view(), name="index"),
-    path('login/', views.loginView.as_view(), name="login"),
-    path('signup/', views.signupView.as_view(), name="signup"),
-    path('email_config/', views.email_configView.as_view(), name="email_config"),
+    path('inquiry/', views.InquiryView.as_view(), name="inqiry"),
+    path('blog-list/', views.BloglistView.as_view(), name=""),
+    path('blog-betail/', views.BlogView.as_view(), name=""),
+    path('blog-create/', views.BlogView.as_view(), name=""),
+    path('blog-update/', views.View.as_view(), name=""),
+    path('blog-delete/', views.View.as_view(), name=""),
     
 ]

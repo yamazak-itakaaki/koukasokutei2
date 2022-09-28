@@ -32,5 +32,5 @@ urlpatterns = [
     path('blog-update/', views.View.as_view(), name=""),
     path('blog-delete/', views.View.as_view(), name=""),
 
-    
+    aaa
 ]

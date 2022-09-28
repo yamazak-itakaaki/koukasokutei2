@@ -19,6 +19,10 @@ from . import views
 
 app_name = 'blog'
 urlpatterns = [
-    path('', views.IndexView.as_view(), name="base"),
+
+    path('', views.IndexView.as_view(), name="index"),
+    path('login/', views.loginView.as_view(), name="login"),
+    path('signup/', views.signupView.as_view(), name="signup"),
+    path('email_config/', views.email_configView.as_view(), name="email_config"),
     
 ]

@@ -19,7 +19,6 @@ from .import views
 
 app_name = 'blog'
 urlpatterns = [
-<<<<<<< HEAD
 
     path('', views.IndexView.as_view(), name="index"),
     path('inquiry/', views.InquiryView.as_view(), name="inqiry"),
@@ -28,9 +27,6 @@ urlpatterns = [
     path('blog-create/', views.BlogView.as_view(), name=""),
     path('blog-update/', views.View.as_view(), name=""),
     path('blog-delete/', views.View.as_view(), name=""),
-=======
-    path('', views.IndexView.as_view(), name="base"),
-    path('inquiry/',views.InquiryView.as_view(), name="inquiry"),
->>>>>>> df63b6ef6b78105aa24487bb52e3698623ae1e22
+
     
 ]

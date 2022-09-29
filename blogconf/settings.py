@@ -42,6 +42,10 @@ INSTALLED_APPS = [
 
     'blog.apps.BlogConfig',
     'accounts.apps.AccountsConfig',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'django_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -135,5 +139,25 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 
 )
-
+AUTH_USER_MODEL ='accounts.CustomUser'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+SITE_ID= 1
+AUTHENTICATION_BACKENDS =(
+    'allauth.account.auth_backends.AuthenticationBackend',
+    'django.contrib.auth.backends.Modelbackend',
+)
+ACCOUNT_AUTHENTICATION_METHOD ='email'
+ACCOUNT_USERNAME_REQUIRED = False
+
+ACCOUNT_EMAIL_VERIFCATION ='mandatory'
+ACCOUNT_EMAIL_REQUIRED =True
+
+LOGIN_REDIRECT_URL = 'blog:base'
+ACCOUNT_LOGOUT_REDIRECT_URL ='account_login'
+
+ACCOUNT_LOGOUT_ON_GET = True
+
+ACCOUNT_EMAIL_SUBJECT_PREFIX=""
+
+DEFALUT_FROM_EMAIL =os.environ.get('FROM_EMAIL')

@@ -25,11 +25,7 @@ app_name = 'blog'
 urlpatterns = [
 
     path('', views.IndexView.as_view(), name="index"),
-    path('inquiry/', views.InquiryView.as_view(), name="inqiry"),
-    path('blog-list/', views.BloglistView.as_view(), name="list"),
-    path('blog-betail/', views.BlogbetailView.as_view(), name="betail"),
-    path('blog-create/', views.BlogcreateView.as_view(), name="create"),
-    path('blog-update/', views.BlogupdateView.as_view(), name="update"),
-    path('blog-delete/', views.BlogdeleteView.as_view(), name="delete"),
+    path('inquiry/', views.InqquiryView.as_view(), name="inqiry"),
+    
 
 ]

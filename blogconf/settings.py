@@ -142,6 +142,7 @@ STATICFILES_DIRS = (
 AUTH_USER_MODEL ='accounts.CustomUser'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+<<<<<<< HEAD
 SITE_ID= 1
 AUTHENTICATION_BACKENDS =(
     'allauth.account.auth_backends.AuthenticationBackend',
@@ -161,3 +162,13 @@ ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_EMAIL_SUBJECT_PREFIX=""
 
 DEFALUT_FROM_EMAIL =os.environ.get('FROM_EMAIL')
+=======
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'alert alert-danger',
+    messages.WARNING: 'alert alert-warning',
+    messages.SUCCESS: 'alert alert-success',
+    messages.INFO: 'alert alert-info',
+}
+>>>>>>> 41b8baa1a2d02bfbb6e6e8ebd71f817750ed95ff

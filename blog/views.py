@@ -1,4 +1,5 @@
 import logging
+from django.contrib import messages
 
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -19,5 +20,6 @@ class InquiryView(generic.FormView):
 
     def form_valid(self, form):
        form.send_email()
-       logger.info('Inquiry sent by {}'.format(form.cleande_data['name']))
+       messages.success(self.request, 'メッセージが送信されました。')
+       logger.info('Inquiry sent by {}'.format(form.cleaned_data['name']))
        return super().form_valid(form)

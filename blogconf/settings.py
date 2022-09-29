@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'blog.apps.BlogConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -136,12 +137,3 @@ STATICFILES_DIRS = (
 )
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-from django.contrib.messages import constants as messages
-
-MESSAGE_TAGS = {
-    messages.ERROR: 'alert alert-danger',
-    messages.WARNING: 'alert alert-warning',
-    messages.SUCCESS: 'alert alert-success',
-    messages.INFO: 'alert alert-info',
-}
